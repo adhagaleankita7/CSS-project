@@ -1,0 +1,819 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Elite India</title>
+
+    <style>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              font-family: Arial, sans-serif;
+            }
+
+            /* BODY */
+            body {
+              min-height: 100vh;
+              background: url("https://img.freepik.com/free-photo/people-business-meeting-high-angle_23-2148911819.jpg?semt=ais_hybrid&w=740&q=80")
+                center/cover no-repeat fixed;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 40px;
+              padding: 40px 0;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            /* GLASS COMMON */
+            .glass {
+              width: 85%;
+              background: rgba(255, 255, 255, 0.3);
+              backdrop-filter: blur(10px);
+              border-radius: 20px;
+              padding: 30px;
+              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+              transition: 0.4s;
+            }
+
+            .glass:hover {
+              transform: scale(1.03);
+            }
+
+
+ 
+
+ /* NAVBAR CONTAINER (STICKY) */
+.navbar-container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  margin-top:20px;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:85%;
+  max-width:1200px;
+  padding:15px 30px;
+  background:rgba(255,255,255,0.3);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* LEFT SIDE (LOGO + TITLE) */
+.navbar-left{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.navbar-logo{
+  width:50px;
+  height:auto;
+}
+
+.navbar-title{
+  font-size:24px;
+  font-weight:bold;
+  color:#000;
+}
+
+/* RIGHT SIDE LINKS */
+.navbar-links{
+  display:flex;
+  gap:25px;
+  margin:0;
+  padding:0;
+  list-style:none;  
+}
+
+.navbar-links a{
+  text-decoration:none;
+  color:#000;
+  font-weight:bold;
+  padding:8px 12px;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+
+
+
+  /* HERO */
+            .hero {
+              text-align: center;
+            }
+
+            .hero h1 {
+              font-size: 40px;
+            }
+
+            .hero p {
+              margin-top: 10px;
+            }
+
+            /* ABOUT */
+            .about-box {
+              display: flex;
+              gap: 30px;
+              align-items: center;
+            }
+
+            .about-box img {
+              width: 100%;
+              border-radius: 15px;
+            }
+
+            /* SERVICES */
+            .services-grid {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 30px;
+            }
+
+            .service-box {
+              background: rgba(255, 255, 255, 0.4);
+              padding: 20px;
+              border-radius: 15px;
+              transition: 0.4s;
+            }
+
+            .service-box:hover {
+              transform: scale(1.05);
+            }
+
+            .about-box{
+        display:flex;
+        gap:30px;
+        align-items:center;
+      }
+
+      /* NEW SMALL GLASS BOX FOR TEXT */
+      .glass-small{
+        background:rgba(255,255,255,0.4);
+        backdrop-filter:blur(10px);
+        padding:25px;
+        border-radius:15px;
+        width:50%;
+        transition:0.4s ease;
+      }
+
+      /* ZOOM EFFECT */
+      .glass-small:hover{
+        transform:scale(1.05);
+      }
+
+      .about-image{
+        width:50%;
+      }
+
+      .about-image img{
+        width:100%;
+        border-radius:15px;
+      }
+
+            /* WHY SECTION */
+           .why-box {
+  width: 320px;
+  min-height: 250px;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.why-box h1{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.why-box p{
+  font-size:14px;
+  line-height:1.6;
+}
+
+.why-box:hover{
+  transform:scale(1.1);
+}
+/* WHY SECTION LAYOUT */
+.triangle-layout{
+  width:85%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:60px;
+  margin:auto;
+}
+
+.top-row{
+  display:flex;
+  gap:60px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+/* WHY TITLES */
+.why-title{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:10px;
+  transition:0.4s ease;
+}
+
+.why-subtitle{
+  text-align:center;
+  font-size:20px;
+  margin-bottom:40px;
+  transition:0.4s ease;
+}
+
+/* ZOOM EFFECT */
+.why-title:hover,
+.why-subtitle:hover{
+  transform:scale(1.1);
+}
+
+/* INNER BLACK CONTACT BOX */
+.contact-box{
+  width:600px;
+  background:rgba(0,0,0,0.8);
+  padding:40px;
+  border-radius:20px;
+  color:white;
+  text-align:center;
+  margin:auto;              /* center inside glass */
+  box-shadow:0 8px 25px rgba(0,0,0,0.4);
+  transition:0.4s ease;
+}
+
+/* INNER ZOOM */
+.contact-box:hover{
+  transform:scale(1.03);
+}
+
+/* FORM SPACING */
+.inner-box{
+  margin-top:20px;
+}
+
+/* INPUT + SELECT */
+.inner-box input,
+.inner-box select{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+  outline:none;
+}
+
+/* BUTTON GROUP */
+.btn-group{
+  display:flex;
+  justify-content:space-between;
+  margin-top:20px;
+}
+
+/* BUTTONS */
+.btn-group button{
+  width:48%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s ease;
+}
+
+/* SUBMIT */
+.submit-btn{
+  background:#007bff;
+}
+
+.submit-btn:hover{
+  background:#0056b3;
+}
+
+/* RESET */
+.reset-btn{
+  background:#e53935;
+}
+
+.reset-btn:hover{
+  background:#b71c1c;
+}
+
+
+./* FOOTER SAME GLASS STYLE */
+.footer{
+  display: flex;
+  justify-content: space-between; /* left and right separate */
+  align-items: center; /* vertical center */
+  width: 85%;
+  padding: 40px 50px;
+}
+
+/* LEFT ADDRESS */
+.footer-left{
+  text-align: left;
+}
+
+/* RIGHT LOGO */
+.footer-right{
+  text-align: right;
+}
+
+.footer-right img{
+  width: 150px; 
+}
+
+/scroll/
+
+body{
+  min-height:100vh;
+  background:url("https://img.freepik.com/free-photo/people-business-meeting-high-angle_23-2148911819.jpg?semt=ais_hybrid&w=740&q=80") center/cover no-repeat fixed;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:40px;
+  padding:40px 0;
+}
+
+.logo-section{
+    overflow:hidden;
+    background:white;
+    padding:30px 0;
+}
+
+.logo-row{
+    display:flex;
+    width:fit-content;
+}
+
+.logo-row img{
+    height:60px;
+    margin:0 40px;
+}
+
+/* Row 1 - Left */
+.row1{
+    animation: scrollLeft 20s linear infinite;
+}
+
+/* Row 2 - Right */
+.row2{
+    animation: scrollRight 20s linear infinite;
+}
+
+/* Row 3 - Left */
+.row3{
+    animation: scrollLeft 25s linear infinite;
+}
+
+/* Animations */
+@keyframes scrollLeft{
+    0%{ transform: translateX(0); }
+    100%{ transform: translateX(-50%); }
+}
+
+@keyframes scrollRight{
+    0%{ transform: translateX(-50%); }
+    100%{ transform: translateX(0); }
+}
+
+/* STICKY YELLOW ARROW */
+      .sticky-arrow {
+        position:fixed;
+        left: 10px;
+        bottom: 50%;
+        transform: translateY(50%);
+        background: #ffc107;
+        color: black;
+        font-size: 22px;
+        padding: 12px 15px;
+        border-radius: 50%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        z-index: 999;
+        transition: 0.3s;
+        text-decoration: none;
+      }
+      .sticky-arrow:hover {
+        background: #ff9800;
+        transform: translateY(50%) scale(1.1);
+      }
+      .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-section {
+    text-align: right;
+    padding: 40px 0;
+    color: black;
+}
+
+.social-section h3 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #00c853;
+    color: white;
+}
+    </style>
+  </head>
+
+  <body>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- NAVBAR -->
+
+
+<div class="navbar">
+  <div class="navbar-left">
+    <img src="https://images.squarespace-cdn.com/content/v1/592a5e90414fb5ddd390f2de/1532820351612-9530I394MNU8YV08FHRE/ELITE+SOLUTIONS.jpg" class="navbar-logo">
+    <span class="navbar-title">Elite India</span>
+  </div>
+  <ul class="navbar-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#what-we-do">What We Do</a></li>
+    <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#connect-with-us">Connect</a></li>
+    <li><a href="#contact-us">Contact</a></li>
+  </ul>
+</div>
+
+    <!-- HERO -->
+    <div class="glass hero" id="about">
+      <h1>GET HIRED FAST!</h1>
+      <p>REGISTER WITH US AND PAVE YOUR WAY TO A GREAT CAREER AHEAD</p>
+    </div>
+
+    <div class="glass about-box">
+  
+  <div class="about-text glass-small" id="about">
+    <h2>About Us</h2>
+    <p>
+      Elite India is a leading staffing agency offering recruitment solutions 
+      and helping companies find the right talent.
+    </p>
+  </div>
+
+  <div class="about-image">
+    <img src="https://www.shutterstock.com/image-photo/computer-discussion-business-people-office-600nw-2704991685.jpg">
+  </div>
+
+</div>
+    </div>
+
+    
+     <!--what we do-->
+    <div class="glass" id="what-we-do">
+      <h2 style="text-align: center; margin-bottom: 20px">What We Do</h2>
+      <div class="services-grid">
+
+        <div class="service-box">
+            <h3>We understand your Recruitment</h3>
+          <p>We understand your hiring needs and provide best candidates.
+            We provide skilled professionals for various industries We
+              understand that every organization has unique hiring needs and
+              business goals. Our team carefully studies your company culture,
+              job requirements, and long-term objectives before recommending
+              candidates. We focus not just on skills, but also on attitude,
+              experience, and cultural fit to ensure the perfect match. By
+              combining industry expertise with a strong talent network, we
+              deliver customized recruitment solutions that help your business
+              grow efficiently and sustainably..
+          </p>
+        </div>
+
+        <div class="service-box">
+          <h3>We Believe in Long-Term Relationships</h3>
+          <p>We build strong partnerships with clients and candidates.
+            Guiding candidates towards better opportunities We Believe in
+              Long-Term Relationships” We believe in building long-term
+              relationships based on trust, transparency, and consistent
+              performance. Our goal is not just to fill positions, but to create
+              lasting partnerships with our clients and candidates. By
+              understanding their evolving needs and providing continuous
+              support, we ensure sustainable growth and mutual success for years
+              to come.
+          </p>
+        </div>
+        <div class="service-box">
+          <h3>extensive database</h3>
+          <p>Helping companies improve hiring strategies. Extensive Database We
+              maintain an extensive database of highly qualified, skilled, and
+              experienced professionals across multiple industries and domains.
+              Our database is continuously updated to ensure we have access to
+              the latest talent in the market. This strong network enables us to
+              quickly identify the most suitable candidates based on specific
+              job requirements, saving time and ensuring quality hiring. With
+              our wide talent pool, we are able to provide efficient, reliable,
+              and customized recruitment solutions to our clients.</p>
+        </div>
+        <div class="service-box">
+          <h3>We have expert to help you</h3>
+          <p>Experienced team to guide you at every step.
+             Professional training programs for workforce growth We Have
+              Experts to Help You We have a team of experienced professionals
+              and industry experts who are dedicated to supporting you at every
+              step. Our specialists understand market trends, recruitment
+              strategies, and business needs, ensuring the best possible
+              guidance and solutions. With their knowledge and expertise, we
+              help you make informed decisions and achieve your goals
+              efficiently and confidently..
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- WHY USE-->
+<div class="glass" id="why-us">
+
+  <h2 class="why-title">Why Opt For Us?</h2>
+  <p class="why-subtitle">We Believe In...</p>
+
+  <div class="triangle-layout">
+    
+    <div class="top-row">
+      
+      <div class="why-box">
+        <h1>Right Candidate for the Right Role</h1>
+        <p>
+          We believe that success begins with the perfect match.
+          We ensure the right person is placed in the right position
+          for long-term growth and performance.
+        </p>
+      </div>
+
+      <div class="why-box">
+        <h1>Right Opportunity for the Right Talent</h1>
+        <p>
+          We connect skilled professionals with opportunities
+          that match their abilities and career goals for
+          confident growth and success.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="why-box">
+      <h1>Perfect Placement Strategy</h1>
+      <p>
+        Our recruitment strategy focuses on quality hiring,
+        cultural fit, and sustainable business growth.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Logo section -->
+    <div class="logo-section">
+      <div class="logo-row row1">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgdN5uaq0RMWIAydcXeyqdkm4dtErZs3sw0w&s"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+        <img
+          src="https://www.thesslstore.com/blog/wp-content/uploads/2011/05/symantec-logo.jpg.gif"
+        />
+        <img
+          src="https://resource.globenewswire.com/Resource/Download/0248e491-8460-4ec9-a5c5-9880cb6904b4"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />" />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+
+        <!-- Duplicate images for smooth infinite scroll -->
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgdN5uaq0RMWIAydcXeyqdkm4dtErZs3sw0w&s"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />" />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+        <img
+          src="https://www.thesslstore.com/blog/wp-content/uploads/2011/05/symantec-logo.jpg.gif"
+        />
+        <img
+          src="https://resource.globenewswire.com/Resource/Download/0248e491-8460-4ec9-a5c5-9880cb6904b4"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />" />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+      </div>
+    </div>
+    
+
+    <!-- Logo section -->
+    <div class="logo-section">
+      <div class="logo-row row2">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgdN5uaq0RMWIAydcXeyqdkm4dtErZs3sw0w&s"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+        <img
+          src="https://www.thesslstore.com/blog/wp-content/uploads/2011/05/symantec-logo.jpg.gif"
+        />
+        <img
+          src="https://resource.globenewswire.com/Resource/Download/0248e491-8460-4ec9-a5c5-9880cb6904b4"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />" />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+
+        <!-- Duplicate images for smooth infinite scroll -->
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgdN5uaq0RMWIAydcXeyqdkm4dtErZs3sw0w&s"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />" />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+        <img
+          src="https://www.thesslstore.com/blog/wp-content/uploads/2011/05/symantec-logo.jpg.gif"
+        />
+        <img
+          src="https://resource.globenewswire.com/Resource/Download/0248e491-8460-4ec9-a5c5-9880cb6904b4"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />" />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+      </div>
+    </div>
+
+    <!-- Logo section -->
+    <div class="logo-section">
+      <div class="logo-row row3">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgdN5uaq0RMWIAydcXeyqdkm4dtErZs3sw0w&s"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+        <img
+          src="https://www.thesslstore.com/blog/wp-content/uploads/2011/05/symantec-logo.jpg.gif"
+        />
+        <img
+          src="https://resource.globenewswire.com/Resource/Download/0248e491-8460-4ec9-a5c5-9880cb6904b4"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />" />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+
+        <!-- Duplicate images for smooth infinite scroll -->
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgdN5uaq0RMWIAydcXeyqdkm4dtErZs3sw0w&s"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />" />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+        <img
+          src="https://www.thesslstore.com/blog/wp-content/uploads/2011/05/symantec-logo.jpg.gif"
+        />
+        <img
+          src="https://resource.globenewswire.com/Resource/Download/0248e491-8460-4ec9-a5c5-9880cb6904b4"
+        />
+        <img
+          src="https://community.nasscom.in/sites/default/files/styles/200_x_200/public/profile-picture/KPIT.png.webp?itok=_ymVzBnq"
+        />" />
+        <img
+          src="https://www.softdel.com/wp-content/uploads/2022/02/softdel-colored-new-logo.png"
+        />
+      </div>
+    </div>
+    <!-- CONNECT WITH US -->
+    
+<div class="glass" id="connect-with-us">  
+
+  <div class="contact-box">  
+    
+    <h2>Connect With Us</h2>
+    <p>Your search will meet destination here</p>
+
+    <div class="inner-box">
+      <input type="text" placeholder="Full Name" />
+      <input type="tel" placeholder="Phone Number" />
+      <input type="email" placeholder="Mail ID" />
+
+      <select>
+        <option>Select Qualification</option>
+        <option>BCA</option>
+        <option>BSc</option>
+        <option>BCom</option>
+      </select>
+
+      <input type="text" placeholder="Enter Branch" />
+      <input type="file" />
+
+      <div class="btn-group">
+        <button class="submit-btn">Submit</button>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Contact us -->
+<div class="glass footer" id="contact-us">
+
+  <!-- LEFT SIDE (ADDRESS) -->
+  <div class="footer-left">
+    <h3>Elite India Placements</h3>
+    <p>2nd Floor, Vinayak Bunglow</p>
+    <p>Nirzer Society, Gulawani Maharaj Road</p>
+    <p>Kothrud, Pune - 411038</p>
+    <p>Maharashtra, India</p>
+  </div>
+
+  <!-- RIGHT SIDE (LOGO) -->
+  <div class="social-section">
+    <h3>Find us on</h3>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+    </div>
+</div>
+<!-- STICKY YELLOW ARROW -->
+    <a href="#" class="sticky-arrow">↑</a>
+</html>
